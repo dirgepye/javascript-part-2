@@ -84,3 +84,15 @@ function sortByEmail(x,y) {
 console.log(getFirstEmail(people)); 
 
 //
+
+/* function squareThisNumber(n) {
+  return n * n;
+}  */
+
+var numbers = [1,2,3,4,5];
+var squares = numbers.map(function squareThisNumber(n) {
+  return n * n;
+});
+
+console.log(squares);
+
