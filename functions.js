@@ -96,3 +96,28 @@ var squares = numbers.map(function squareThisNumber(n) {
 
 console.log(squares);
 
+// 
+
+var one = [
+  {
+    name: "rgsags",
+    num: 4,
+    color: "blue"
+  },
+  {
+    name: "kagjsj",
+    num: 8,
+    color: "green",
+  },
+  {
+    name: "dksafjs",
+    num: 6,
+    color: "red"
+  }
+];
+
+var squareIt = one.map(function squaredObject(object) {
+  return object.num * object.num
+});
+
+console.log(squareIt);
