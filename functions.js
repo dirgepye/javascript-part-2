@@ -96,7 +96,7 @@ var squares = numbers.map(function squareThisNumber(n) {
 
 console.log(squares);
 
-// 
+// squaring the "num" property of an object
 
 var one = [
   {
@@ -114,10 +114,60 @@ var one = [
     num: 6,
     color: "red"
   }
-];
+]
 
 var squareIt = one.map(function squaredObject(object) {
   return object.num * object.num
-});
+}) ;
 
 console.log(squareIt);
+
+//
+
+var adder = operationMaker("add"); 
+var sum = adder(5, 10); 
+
+//var multiplier = operationMaker(“mult”); 
+// var product = mult(5, 10)
+
+function operationMaker(opp) {
+  if (opp === "add") {
+    return function(num1,num2) {
+      return num1 + num2;
+    }
+  }
+  else if(opp === "sub") {
+    return function(num1,num2){
+      return num1 - num2;
+    }
+  }
+  else if(opp === "mult") {
+    return function(num1,num2) {
+      return num1 * num2;
+    }
+  }
+  else if(opp === "div") {
+    return function(num1,num2) {
+      return num1 / num2;
+    }
+  }
+};
+  
+var adder = operationMaker("add");
+var sum = adder(5,10);
+
+var subtract = operationMaker("sub");
+var difference = subtract(10,5);
+
+var multiply = operationMaker("mult");
+var product = multiply(10,10);
+
+var divide = operationMaker("div");
+var divided = divide(50,5);
+
+console.log(sum);
+console.log(difference);
+console.log(product);
+console.log(divided);
+
+// 
