@@ -34,3 +34,4 @@ var warrior5 = new warrior("george clooney","male");
 var warrior6 = new warrior("henry kissinger","male")
 
 console.log(warrior1.faceoff(warrior4));
+
